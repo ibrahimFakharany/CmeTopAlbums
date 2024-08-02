@@ -1,6 +1,7 @@
 Album List
-![Screenshot_1722558895](https://github.com/user-attachments/assets/39bf0c5e-ed16-49db-9c2b-49c02e09ad20)
-![Screenshot_1722558892](https://github.com/user-attachments/assets/70c00051-0e9e-40c3-87e1-e2f5806e0b3e)
+![Screenshot_1722558892](https://github.com/user-attachments/assets/70c00051-0e9e-40c3-87e1-e2f5806e0b3e) ![Screenshot_1722558895](https://github.com/user-attachments/assets/39bf0c5e-ed16-49db-9c2b-49c02e09ad20)
+
+
 
 Album List is an Android application that lets users discover and enjoy top albums, with a focus on providing a seamless experience, even offline.
 
