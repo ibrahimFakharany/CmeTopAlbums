@@ -3,6 +3,7 @@ package com.ifakharany.features.album.albumList
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -39,6 +40,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.layout
 import androidx.compose.ui.platform.LocalContext
@@ -53,6 +55,7 @@ import com.ifakharany.core.MeasureUnconstrainedViewWidth
 import com.ifakharany.core.base.ProgressState
 import com.ifakharany.core.calculateCurrentSize
 import com.ifakharany.core.getFraction
+import com.ifakharany.core.theme.Purple40
 
 @Composable
 fun AlbumListScreen(navController: NavHostController) {
@@ -189,6 +192,7 @@ fun AlbumListComponent(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(toolbarHeight)
+                    .background(Purple40)
             ) {
                 Box(
                     modifier = Modifier.fillMaxSize()
@@ -255,7 +259,7 @@ fun AlbumListComponent(
 private fun AlbumItem(
     album: Album, onAlbumClick: (album: Album) -> Unit
 ) {
-    Column(modifier = Modifier
+    Box(modifier = Modifier
         .fillMaxWidth()
         .aspectRatio(1f)
         .clip(shape = RoundedCornerShape(20.dp))
@@ -272,14 +276,19 @@ private fun AlbumItem(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
+                .align(Alignment.BottomStart)
                 .padding(start = 12.dp, end = 13.dp, bottom = 12.dp),
-            horizontalAlignment = Alignment.Start
-        ) {
+            horizontalAlignment = Alignment.Start,
+
+            ) {
             Text(
-                text = album.albumName
+                text = album.albumName,
+                color = Color.White
             )
             Text(
-                text = album.artistName
+                text = album.artistName,
+                color = Color.White
+
             )
         }
     }
